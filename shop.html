@@ -1,296 +1,483 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>Memostra</title>
-    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="utf-8"/>
+    <title>Memostra</title>
+    <link href="css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
-    <div class="wrap">
-        <!-- HEADER -->
-        <div class="header">
-            <div class="logo_wrap clearfix">
-                <a href="#">
-                    <img src="img/logo.png" alt="" width="284" height="57" />
-                </a>
-                <p class="header_contact">For additional information, contact us!<span>info@memostra.com</span></p>
-                
-            </div>
-            
-            <div>
-                <ul class="header_nav">
-                    <li>
-                        <a href="">Home</a>
-                        <div class="ugol"></div>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact us</a>
-                    </li>
-                </ul>
-            </div>
+<div class="wrap">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo_wrap clearfix">
+            <a href="#">
+                <img src="img/logo.png" alt="" width="284" height="57"/>
+            </a>
+            <p class="header_contact">For additional information, contact us!<span>info@memostra.com</span></p>
 
         </div>
-        <div class="wrap_categories pag clearfix">
-            <div class="categories">
-                <span class="product_title">Shoes</span>
-                <ul>
-                    <li>Electronics</li>
-                    <li class="active">Chothing</li>
-                    <li>Perfumes</li>
-                </ul>
+
+        <div>
+            <ul class="header_nav">
+                <li>
+                    <a href="">Home</a>
+                    <div class="ugol"></div>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="wrap_categories pag clearfix">
+        <div class="categoriess">
+            <p id="first" class="product_title">Categories</p>
+            <form name="demoForm">
+                <select name="demoSelect" class="styled-select" onchange="showByCategory()">
+                    <option value="zilch">Select:</option>
+
+                    <option value="B">Singlet</option>
+                    <option value="A">Shoes</option>
+                    <option value="F">Cap</option>
+                    <!--<option value="C">Jacket</option>
+                    <option value="D">Shorts</option>
+                    <option value="J">Pants</option>-->
+
+                </select>
+            </form>
+        </div>
+        <div class="categoriess">
+            <p id="last" class="product_title">Size</p>
+            <form name="demoForm1">
+                <select name="demoSelect1" class="styled-select" onchange="showData1()">
+                    <option value="zilch">Select:</option>
+                    <option value="A">XS</option>
+                    <option value="B">X</option>
+                    <option value="C">M</option>
+                    <option value="D">L</option>
+                    <option value="J">XL</option>
+                    <option value="F">XXL</option>
+                    <option value="I">XXXL</option>
+                </select>
+            </form>
+        </div>
+        <div class="categoriess">
+            <p id="firstP" class="product_title">Color</p>
+            <form name="demoForm2">
+                <select name="demoSelect" class="styled-select" onchange="showData2()">
+                    <option value="zilch">Select:</option>
+                    <option value="A">blac</option>
+                    <option value="B">All-over print</option>
+                    <option value="D">Blue</option>
+                    <option value="J">Charcoal</option>
+                    <option value="F">Grey</option>
+                    <option value="I">Grey Melange</option>
+                    <option value="K">Off White</option>
+                    <option value="L">Red</option>
+                    <option value="M">While</option>
+                </select>
+            </form>
+        </div>
+        <div class="categoriess">
+            <p id="lastL" class="product_title">Sort</p>
+            <form name="demoForm3">
+                <select name="demoSelect" class="styled-select" onchange="showData3()">
+                    <option value="zilch">Select:</option>
+                    <option value="A">low price</option>
+                    <option value="B">high price</option>
+                </select>
+            </form>
+        </div>
+        <div>
+            <button class="button_filter"> Clear Filter</button>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <div class="filter_wrap clearfix">
+            <ul class="filter">
+                <li class="filter_active">All Categories</li>
+                <li>Men</li>
+                <li>Women</li>
+            </ul>
+
+            <form class="search_form" action="" method="get">
+                <input type="text" name="search" placeholder="Browse Products"/>
+                <input type="submit" value="Search"/>
+            </form>
+        </div>
+
+        <!-- goods -->
+        <div class="product_wrap">
+            <!--Singlet-->
+            <div class="product 1">
+                <h3 class="product_title">
+                    <a href="#">Adidas</a>
+                </h3>
+                <a class="product_img" href="#">
+                    <img src="img/fot1.jpg" id='1_1' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: <span>US $65</span></p>
+                <p class="product_code">COD: <span>AE001</span></p>
             </div>
-            <div class="categories">
-                <span class="product_title">M</span>
-                <ul>
-                    <li>size</li>
-                    <li>XS</li>
-                    <li>S</li>
-                    <li class="active">M</li>
-                    <li>ML</li>
-                    <li>L</li>
-                    <li>XL</li>
-                    <li>XXL</li>
-                </ul>
+            <div class="product 1">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#">
+                    <img src="img/fot2.jpg" id='1_2' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: US $75</p>
+                <p class="product_code">COD: AE002</p>
             </div>
-            <div class="categories">
-                <span class="product_title">Grey</span>
-                <ul>
-                    <li>colors</li>
-                    <li>blac</li>
-                    <li>All-over print</li>
-                    <li>Blue</li>
-                    <li>Charcoal</li>
-                    <li class="active">Grey</li>
-                    <li>Grey Melange</li>
-                    <li>Off White</li>
-                    <li>Red</li>
-                    <li>While</li>
-                </ul>
+            <div class="product 1">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#"><img src="img/fot3.jpg" id='1_3' alt="fot1" width="290"
+                                                     height="290"/></a>
+
+                <p class="product_price">Price: US $85</p>
+                <p class="product_code">COD: AE003</p>
             </div>
-            <div class="categories">
-                <span class="product_title">Sort</span>
-                <ul>
-                    <li class="active">Sort</li>
-                    <li>Sort2</li>
-                    <li>Sort3</li>
-                    <li>Sort4</li>
-                    <li>Sort5</li>
-                    <li>Sort6</li>
-                    <li>Sort7</li>
-                    <li>Sort8</li>
-                    <li>Sort9</li>
-                    <li>Sort10</li>
-                </ul>
+
+
+            <!--Shoes-->
+            <div class="product 2">
+                <h3 class="product_title">
+                    <a href="#">Adidas</a>
+                </h3>
+                <a class="product_img" href="#">
+                    <img src="img/shoes1.jpg" id='2_1' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: <span>US $65</span></p>
+                <p class="product_code">COD: <span>AE001</span></p>
             </div>
-            <div class="button">
-                <button> Clear Filter</button>
+            <div class="product 2">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#">
+                    <img src="img/shoes2.jpg" id='2_2' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: US $75</p>
+                <p class="product_code">COD: AE002</p>
+            </div>
+            <div class="product 2">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#"><img src="img/shoes3.jpg" id='2_3' alt="fot1" width="290" height="290"/></a>
+
+                <p class="product_price">Price: US $85</p>
+                <p class="product_code">COD: AE003</p>
+            </div>
+
+
+            <!--cap-->
+            <div class="product 3">
+                <h3 class="product_title">
+                    <a href="#">Adidas</a>
+                </h3>
+                <a class="product_img" href="#">
+                    <img src="img/cap1.jpg" id='3_1' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: <span>US $65</span></p>
+                <p class="product_code">COD: <span>AE001</span></p>
+            </div>
+            <div class="product 3">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#">
+                    <img src="img/cap2.jpg" id='3_2' alt="fot1" width="290" height="290"/>
+                </a>
+
+                <p class="product_price">Price: US $75</p>
+                <p class="product_code">COD: AE002</p>
+            </div>
+            <div class="product 3">
+                <h3 class="product_title"><a href="#">Adidas</a></h3>
+                <a class="product_img" href="#"><img src="img/cap3.jpg" id='3_3' alt="fot1" width="290"
+                                                     height="290"/></a>
+
+                <p class="product_price">Price: US $85</p>
+                <p class="product_code">COD: AE003</p>
+            </div>
+
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pag clearfix">
+            <a class="prev" href="#">&laquo; Previous</a>
+            <a class="next" href="#">Next &raquo;</a>
+            <div class="pag_wrap">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
             </div>
         </div>
-        <!-- MAIN -->
-        <div class="main">
-            <div class="filter_wrap clearfix">
-                <ul class="filter">
-                    <li class="filter_active">All Categories</li>
-                    <li>Men</li>
-                    <li>Women</li>
-                </ul>
-                
-                <form class="search_form" action="" method="get">
-                    <input type="text" name="search" placeholder="Browse Products" />
-                    <input type="submit" value="Search" />
-                </form>
-            </div>
-            
-            <!-- goods -->
-            <div class="product_wrap">
-                <div class="product">
-                    <h3 class="product_title">
-                        <a href="#">Adidas</a>
-                    </h3>
-                    <a class="product_img" href="#">
-                        <img src="img/fot1.jpg" alt="fot1" width="290" height="290" />
-                    </a>
-                    
-                    <p class="product_price">Price: <span>US $65</span></p>
-                    <p class="product_code">COD: <span>AE001</span></p>
-                </div>
-                <div class="product">
-                    <h3 class="product_title"><a href="#">Adidas</a></h3>
-                    <a class="product_img" href="#">
-                        <img src="img/fot2.jpg" alt="fot1" width="290" height="290" />
-                    </a>
-                    
-                    <p class="product_price">Price: US $75</p>
-                    <p class="product_code">COD: AE002</p>
-                </div>
-                <div class="product">
-                    <h3 class="product_title"><a href="#">Adidas</a></h3>
-                    <a class="product_img" href="#"><img src="img/fot3.jpg" alt="fot1" width="290" height="290" /></a>
-                    
-                    <p class="product_price">Price: US $85</p>
-                    <p class="product_code">COD: AE003</p>
-                </div>
-                
-                <hr />
-            </div>
-            
-            <!-- PAGINATION -->
-            <div class="pag clearfix">
-                <a class="prev" href="#">&laquo; Previous</a>
-                <a class="next" href="#">Next &raquo;</a>
-                <div class="pag_wrap">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                </div>
-            </div>
-        </div>
-        <!-- SLIDER -->
+    </div>
+    <!-- SLIDER -->
+    <div id="shop">
         <div id="main_slider">
-            <button id="left" ><</button>
+            <button id="left" class="button"><</button>
             <div id="scr"></div>
-            <button id="right">></button>
+            <button id="right" class="button">></button>
         </div>
         <div id="main_bottom">
             <div id="scr_bottom"></div>
         </div>
-        
-        <!-- FOOTER -->
-        <div class="footer clearfix">
-            <p class="footer_text">Copyright &copy;2010 Me Mostra. All Rights Reserved.<br />
-            Website Designed and Developed by <span>Dellustrations</span></p>
-            <ul class="footer_nav">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li><a href="#">About Amostras</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
     </div>
+    <!-- FOOTER -->
+    <div class="footer clearfix">
+        <p class="footer_text">Copyright &copy;2017 Me HostMax. All Rights Reserved.<br/>
+            Website Designed and Developed by <span>DellustrationsHostMax</span></p>
+        <ul class="footer_nav">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li><a href="#">About Amostras</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
 
 <script type="text/javascript">
-    //WRAP CATEGORIES
+    var category = 1;
+    document.getElementById('shop').style.display = 'none';
+    function showByCategory() {
+        document.getElementById('shop').style.display = 'none';
+        var theSelect = demoForm.demoSelect;
+        var first = document.getElementById('first');
+        first.innerHTML = (theSelect[theSelect.selectedIndex].text);
+        setSingletToGoods(theSelect.selectedIndex);
+    }
+    function setSingletToGoods(selectedIndex) {
+        var parent = document.getElementsByClassName('product_wrap')[0];
+        var allGoods = parent.getElementsByClassName('product');
+
+        for (var i = 0; i < allGoods.length; i++) {
+            //console.log(allGoods[i]);
+            var tmp = 'product' + ' ' + selectedIndex;
 
 
-    
-    // SLIDER
-    var slides=[
-    'img/fot1.jpg',
-    'img/fot2.jpg',
-    'img/fot3.jpg',
-    ];
+            if (allGoods[i].className != tmp) {
+                allGoods[i].style.display = 'none';
 
-    var slide_left = document.getElementById('left'),
-    slide_right = document.getElementById('right'),
-    scr = document.getElementById('scr'),
-    scr_bottom = document.getElementById('scr_bottom'),
-    idx = 0, // Индекс текущего слайда.
-    total_img = [],
-    total_img_bottom = [];
+            }else {
+                allGoods[i].style.display = '';
+            }
 
-    for(var i = 0;i<slides.length;i++){
-    total_img[i] = document.createElement('img');
-    total_img[i].src = slides[i];
-    total_img[i].style.width = '250px';
-    total_img[i].style.display = 'none';
-    total_img[i].classList.add('idx' + i);
-    scr.appendChild(total_img[i]);
+        }
+        category = selectedIndex;
+        //changeImageInSlider(selectedIndex);
+    }
+    function showData1() {
+        var theSelect = demoForm1.demoSelect;
+        var last = document.getElementById('last');
+        last.innerHTML = (theSelect[theSelect.selectedIndex].text);
+    }
+    function showData2() {
+        var theSelect = demoForm2.demoSelect;
+        var firstP = document.getElementById('firstP');
+        firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+    }
+    function showData3() {
+        var theSelect = demoForm3.demoSelect;
+        var lastL = document.getElementById('lastL');
+        lastL.innerHTML = (theSelect[theSelect.selectedIndex].text);
     }
 
+
+    //WRAP CATEGORIES
+    //    var category = document.getElementById("ddlViewBy");
+    //	var str = category.options[category.selectedIndex].value;
+    // SLIDER
+    var slides = [
+        'img/fot1.jpg',
+        'img/fot2.jpg',
+        'img/fot3.jpg',
+    ];
+    var slides_shoes = [
+        'img/shoes1.jpg',
+        'img/shoes2.jpg',
+        'img/shoes3.jpg',
+    ];
+    var slides_cap = [
+        'img/cap1.jpg',
+        'img/cap2.jpg',
+        'img/cap3.jpg',
+    ];
+
+    var sliders = new Array();
+    sliders[1] = new Array();
+    sliders[1] = [
+        'img/fot1.jpg',
+        'img/fot2.jpg',
+        'img/fot3.jpg',
+    ];
+    sliders[2] = new Array();
+    sliders[2] = [
+        'img/shoes1.jpg',
+        'img/shoes2.jpg',
+        'img/shoes3.jpg',
+    ];
+    sliders[3] = new Array();
+    sliders[3] = [
+        'img/cap1.jpg',
+        'img/cap2.jpg',
+        'img/cap3.jpg',
+    ];
+
+
+    var slide_left = document.getElementById('left'),
+        slide_right = document.getElementById('right'),
+        scr = document.getElementById('scr'),
+        scr_bottom = document.getElementById('scr_bottom'),
+        idx = 0, // Индекс текущего слайда.
+        total_img = [],
+        total_img_bottom = [];
+
+    function changeImageInSlider(k) {
+        for (var i = 0; i < sliders[k].length; i++) {
+            total_img[i].src = sliders[k][i];
+            total_img[i].style.width = '250px';
+            total_img[i].style.display = 'none';
+            total_img[i].classList.add('idx' + i);
+        }
+        total_img[idx].style.display = 'block';
+        slide_left.style.display = 'none';
+        slide_right.addEventListener('click', moveLeft);
+
+        for (var i = 0; i < sliders[k].length; i++) {
+            total_img_bottom[i].src = sliders[k][i];
+            total_img_bottom[i].style.width = '100px';
+            total_img_bottom[i].style.height = '70px';
+            total_img_bottom[i].style.float = 'left';
+            total_img_bottom[i].classList.add('idx' + i);
+
+        }
+    }
+
+    for (var i = 0; i < slides.length; i++) {
+        total_img[i] = document.createElement('img');
+        total_img[i].src = slides[i];
+        total_img[i].style.width = '250px';
+        total_img[i].style.display = 'none';
+        total_img[i].classList.add('idx' + i);
+        scr.appendChild(total_img[i]);
+    }
     total_img[idx].style.display = 'block';
     slide_left.style.display = 'none';
     slide_right.addEventListener('click', moveLeft);
-
-    function moveLeft(){
-    slide_left.style.display = 'block';
-    total_img[idx].style.display = 'none'; // Скрываем текущий слайд
-    total_img[++idx].style.display = 'block'; // Инкрементируем индекс и показываем следующий слайд
-    if (idx === total_img.length - 1) {
-    slide_right.style.display = 'none';
+    function moveLeft() {
+        slide_left.style.display = 'block';
+        total_img[idx].style.display = 'none'; // Скрываем текущий слайд
+        total_img[++idx].style.display = 'block'; // Инкрементируем индекс и показываем следующий слайд
+        if (idx === total_img.length - 1) {
+            slide_right.style.display = 'none';
+        }
     }
-    }
-
     //Аналогично, только для левой стрелки
     slide_left.addEventListener('click', moveRight);
-    function moveRight(){
-    slide_right.style.display = 'block';
-    total_img[idx].style.display = 'none';
-    total_img[--idx].style.display = 'block';
-    if (idx === 0) {
-    slide_left.style.display = 'none';
+    function moveRight() {
+        slide_right.style.display = 'block';
+        total_img[idx].style.display = 'none';
+        total_img[--idx].style.display = 'block';
+        if (idx === 0) {
+            slide_left.style.display = 'none';
+        }
     }
-    }
-
-
-
     for (var i = 0; i < slides.length; i++) {
-    total_img_bottom[i] = document.createElement('img');
-    total_img_bottom[i].src = slides[i];
-    total_img_bottom[i].style.width = '100px';
-    total_img_bottom[i].style.height = '70px';
-    total_img_bottom[i].style.float = 'left';
-    total_img_bottom[i].classList.add('idx' + i);
-    scr_bottom.appendChild(total_img_bottom[i]);
+        total_img_bottom[i] = document.createElement('img');
+        total_img_bottom[i].src = slides[i];
+        total_img_bottom[i].style.width = '100px';
+        total_img_bottom[i].style.height = '70px';
+        total_img_bottom[i].style.float = 'left';
+        total_img_bottom[i].classList.add('idx' + i);
+        scr_bottom.appendChild(total_img_bottom[i]);
     }
-
-    //Собираем все картинки, которые есть на странице
-    var images = document.getElementsByTagName("img");
+    //Собираем все картинки, которые есть в нижнем слайдере
+    var images = document.getElementById("shop").getElementsByTagName("img");
     console.log(images);
     for (var i = 0; i < images.length; i++) {
-    images[i].addEventListener("click", move);
+        images[i].addEventListener("click", move);
     }
 
+    //Собираем все картинки, которые есть в категирии
+    var imagesWrap = document.getElementsByClassName('product_wrap')[0].getElementsByTagName("img");
+    for (var i = 0; i < imagesWrap.length; i++) {
+
+        imagesWrap[i].addEventListener("click", function () {
+            moveWrap(this.id.split('_')[1]);
+            category = this.id.split('_')[0];
+            changeImageInSlider(category);
+        });
+
+    }
+    function moveWrap(id) {
+
+        document.getElementById('shop').style.display = 'block';
+        for (var i = 0; i < total_img.length; i++) {
+            if (id == i + 1) {
+                idx = i;
+                total_img[i].style.display = 'block';
+            } else {
+
+                total_img[i].style.display = 'none';
+
+            }
+
+        }
+
+
+    }
+    //При клике на картинки нижнего слайдера изменяет картинку верхгнего изображения
     function move() {
-    console.log(idx);
-    var temp_img = this.className;
-    total_img[idx].style.display = 'none'; // Скрываем текущий слайд
-    idx = temp_img.substr(3);
-    total_img[idx].style.display = 'block';
-    if (idx == slides.length - 1) {
-    slide_right.style.display = 'none';
-    slide_left.style.display = 'block';
-    } else if (idx == 0) {
-    slide_left.style.display = 'none';
-    slide_right.style.display = 'block';
-    } else {
-    slide_right.style.display = 'block';
-    slide_left.style.display = 'block';
-    }
-    }
 
+        var temp_img = this.className;
+        total_img[idx].style.display = 'none'; // Скрываем текущий слайд
+        idx = temp_img.substr(3);
+        console.log(idx);
+        total_img[idx].style.display = 'block';
+        if (idx == slides.length - 1) {
+            slide_right.style.display = 'none';
+            slide_left.style.display = 'block';
+        } else if (idx == 0) {
+            slide_left.style.display = 'none';
+            slide_right.style.display = 'block';
+        } else {
+            slide_right.style.display = 'block';
+            slide_left.style.display = 'block';
+        }
+    }
     var main = document.getElementById("main");
     var button = document.getElementsByTagName("button");
-
-
-    main.addEventListener("mouseenter", function( event ) {
-
-    for (var i=0; i<button.length; i++) {
-    button[i].style.display='block';
-    }
-    if (idx == slides.length - 1) {
-    slide_right.style.display = 'none';
-    slide_left.style.display = 'block';
-    } else if (idx == 0) {
-    slide_left.style.display = 'none';
-    slide_right.style.display = 'block';
-    } else {
-    slide_right.style.display = 'block';
-    slide_left.style.display = 'block';
-    }
-    setTimeout(function () {
-    for (var i=0; i<button.length; i++) {
-    button[i].style.display = "none";
-    }
-    }, 5000);
+    main.addEventListener("mouseenter", function (event) {
+        for (var i = 0; i < button.length; i++) {
+            button[i].style.display = 'block';
+        }
+        if (idx == slides.length - 1) {
+            slide_right.style.display = 'none';
+            slide_left.style.display = 'block';
+        } else if (idx == 0) {
+            slide_left.style.display = 'none';
+            slide_right.style.display = 'block';
+        } else {
+            slide_right.style.display = 'block';
+            slide_left.style.display = 'block';
+        }
+        setTimeout(function () {
+            for (var i = 0; i < button.length; i++) {
+                button[i].style.display = "none";
+            }
+        }, 5000);
     }, false);
-
-
 </script>
 
 </body>

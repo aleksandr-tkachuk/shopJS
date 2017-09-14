@@ -91,8 +91,24 @@ hr {
             
             .header_nav a:hover {
                 background-color: #135B86;
-            }
+			}
+			
 
+	 /*  -------------categoriess -----------------------*/
+			.categoriess{
+				/* border: 1px solid blue; */
+				margin-right: 10px;
+				height: 40px;
+				width: 180px;
+				float: left;
+				position: relative;
+			}
+			.styled-select{
+				height: 29px;
+				overflow: hidden;
+				width: 160px;
+                background-color: #DCEBF4;
+			}
     /* categories*/
     .wrap_categories{
         max-width: 1000px;
@@ -100,15 +116,23 @@ hr {
     }
 
     .categories{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         margin-right: 10px;
         height: 40px;
         width: 180px;
         float: left;
         position: relative;
     }
-    .button{
-        margin-bottom: 10px;
+    .button_filter{
+		margin-bottom: 10px;
+		background-color: #C3DCBA;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
     }
     .categories span{
         display: block;
@@ -118,14 +142,15 @@ hr {
         background-color: #DCEBF4;
         position: absolute;
         z-index: 1;
-        border:solid 1px blue;
+        border:solid 1px 0  blue; 
     }
     .categories li{
         list-style-type: none;
         width: 160px;
         margin: 10px;
         display: none;
-    }
+	}
+
     .categories li.active {
         background-image: url(../img/check1.png);
         background-repeat: no-repeat;
@@ -135,7 +160,10 @@ hr {
     .categories:hover li{
         display: block;
     }
-    
+    .categories span{
+		text-decoration: none;
+		color: #4f8fb4; 
+	}
     /* Banner */
     .banner {
         outline: 0px solid blue;
@@ -191,7 +219,7 @@ hr {
 
     }
 
-    button {
+    .button {
         position: absolute;
         top: 150px;
         width: 25px;
@@ -448,16 +476,3 @@ hr {
 .filter_title {
     float: left;
 } 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
